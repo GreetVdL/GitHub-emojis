@@ -260,6 +260,12 @@ header a img {
   cursor: pointer;
 }
 
+/* responsive styles */
+@media screen and (max-width: 800px) {
+  #container > div > input {
+    display: none;
+  }
+}
 @media screen and (max-width: 489px) {
   #list {
     padding: 60px 5px;
