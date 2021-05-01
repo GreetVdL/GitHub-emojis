@@ -4,6 +4,7 @@ const API = new Backend();
 API.setBaseUrl("https://api.github.com");
 const list = document.querySelector("#list");
 let html = "";
+const searchfield = document.querySelector("#search");
 
 window.addEventListener("DOMContentLoaded", () => {
   API.get("/emojis")
@@ -14,8 +15,22 @@ window.addEventListener("DOMContentLoaded", () => {
         new Image().src = data[key];
       }
 
+      //   print emojis
       list.insertAdjacentHTML("beforeend", html);
 
+      //   search functionality
+      searchfield.addEventListener("keyup", (e) => {
+        html = "";
+        list.innerHTML = "";
+        for (let key in data) {
+          if (key.includes(e.target.value)) {
+            html += `<li><img alt="emoji" src="${data[key]}"><p class="emoji">:${key}:</p></li>`;
+          }
+        }
+        list.insertAdjacentHTML("beforeend", html);
+      });
+
+      // copy to clipboard
       document.querySelectorAll(".emoji").forEach((text) => {
         text.addEventListener("click", function (e) {
           var range = document.createRange();
