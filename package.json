@@ -1,0 +1,15 @@
+{
+  "name": "github-emojis",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-run-all --parallel dev-style dev-server",
+    "dev-style": "sass ./css/index.scss ./css/index.css --watch",
+    "dev-server": "live-server",
+    "prod-style": "sass ./styles/style.scss ./styles/style.css --no-source-map --style=compressed"
+  },
+  "author": "Greet",
+  "license": "ISC"
+}

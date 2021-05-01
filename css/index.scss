@@ -1,0 +1,62 @@
+@use "./base/variables" as *;
+@use "./base/reset";
+@use "./base/fonts";
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  min-height: 100vh;
+  background: $pastel-pink;
+}
+
+#container {
+  background-color: $pastel-yellow;
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+/* header styles */
+
+header {
+  font-family: "Borsok";
+  text-align: center;
+  font-size: 6rem;
+  padding: 50px 10px 20px 10px;
+  color: $fuchsia;
+}
+
+/* list styles */
+
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  row-gap: 30px;
+  column-gap: 30px;
+  padding: 60px 30px;
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 60px;
+      height: auto;
+      display: block;
+      margin: 15px;
+    }
+    p {
+      text-align: center;
+      width: 100%;
+      font-family: "Baloo 2", cursive;
+      font-size: 1.9rem;
+      margin-top: 10px;
+      color: $waabwaab-blauw;
+    }
+  }
+}
