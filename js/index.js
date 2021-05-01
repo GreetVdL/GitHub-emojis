@@ -10,13 +10,13 @@ window.addEventListener("DOMContentLoaded", () => {
     .then((data) => {
       console.log(data);
       for (let key in data) {
-        html += `<li><img alt="emoji" src="${data[key]}"><p>:${key}:</p></li>`;
+        html += `<li><img alt="emoji" src="${data[key]}"><p class="emoji">:${key}:</p></li>`;
         new Image().src = data[key];
       }
 
       list.insertAdjacentHTML("beforeend", html);
 
-      document.querySelectorAll("p").forEach((text) => {
+      document.querySelectorAll(".emoji").forEach((text) => {
         text.addEventListener("click", function (e) {
           var range = document.createRange();
           range.selectNode(e.target);
