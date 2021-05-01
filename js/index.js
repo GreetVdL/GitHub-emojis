@@ -19,7 +19,7 @@ window.addEventListener("DOMContentLoaded", () => {
       list.insertAdjacentHTML("beforeend", html);
 
       //   search functionality
-      searchfield.addEventListener("keyup touchend", (e) => {
+      searchfield.addEventListener("keyup", (e) => {
         html = "";
         list.innerHTML = "";
         for (let key in data) {
