@@ -191,7 +191,7 @@ header p:last-child {
   font-size: 3rem;
   color: #00b5e2;
   text-transform: uppercase;
-  padding-top: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 /* list styles */
@@ -217,10 +217,24 @@ header p:last-child {
   text-align: center;
   width: 100%;
   font-family: "Baloo 2", cursive;
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   margin-top: 10px;
   color: #00b5e2;
   cursor: pointer;
+}
+
+@media screen and (max-width: 489px) {
+  #list {
+    padding: 60px 5px;
+  }
+
+  #list li img {
+    width: 80px;
+  }
+
+  #list li p {
+    font-size: 2.1rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
