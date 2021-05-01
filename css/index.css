@@ -181,9 +181,17 @@ body {
 header {
   font-family: "Borsok";
   text-align: center;
+}
+header p:first-child {
   font-size: 6rem;
   padding: 50px 10px 20px 10px;
   color: #f90975;
+}
+header p:last-child {
+  font-size: 3rem;
+  color: #00b5e2;
+  text-transform: uppercase;
+  padding-top: 10px;
 }
 
 /* list styles */
@@ -209,9 +217,10 @@ header {
   text-align: center;
   width: 100%;
   font-family: "Baloo 2", cursive;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   margin-top: 10px;
   color: #00b5e2;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=index.css.map */
