@@ -28,6 +28,20 @@ window.addEventListener("DOMContentLoaded", () => {
           }
         }
         list.insertAdjacentHTML("beforeend", html);
+        document.querySelectorAll(".emoji").forEach((text) => {
+          text.addEventListener("click", function (e) {
+            var range = document.createRange();
+            range.selectNode(e.target);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+            e.target.style.color = "#f90975";
+            setTimeout(() => {
+              e.target.style.color = "#00b5e2";
+            }, 500);
+          });
+        });
       });
 
       // copy to clipboard
