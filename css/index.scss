@@ -68,6 +68,7 @@ header {
       color: $fuchsia;
       font-family: "Borsok";
       font-size: 1.6rem;
+      line-height: 55px;
       letter-spacing: 0.5rem;
     }
   }
@@ -78,6 +79,7 @@ header {
   font-family: "Borsok";
   font-size: 1.6rem;
   letter-spacing: 0.5rem;
+  line-height: 55px;
 }
 
 /* list styles */
@@ -116,7 +118,8 @@ header {
   #container {
     > div {
       > input {
-        display: none;
+        // display: none;
+        height: 65px;
       }
     }
   }

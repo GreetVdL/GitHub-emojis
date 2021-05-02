@@ -221,6 +221,7 @@ header a img {
   color: #f90975;
   font-family: "Borsok";
   font-size: 1.6rem;
+  line-height: 55px;
   letter-spacing: 0.5rem;
 }
 
@@ -229,6 +230,7 @@ header a img {
   font-family: "Borsok";
   font-size: 1.6rem;
   letter-spacing: 0.5rem;
+  line-height: 55px;
 }
 
 /* list styles */
@@ -263,7 +265,7 @@ header a img {
 /* responsive styles */
 @media screen and (max-width: 800px) {
   #container > div > input {
-    display: none;
+    height: 65px;
   }
 }
 @media screen and (max-width: 489px) {
