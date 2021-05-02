@@ -70,6 +70,7 @@ header {
       font-size: 1.6rem;
       line-height: 55px;
       letter-spacing: 0.5rem;
+      display: block;
     }
   }
 }
@@ -118,8 +119,7 @@ header {
   #container {
     > div {
       > input {
-        // display: none;
-        height: 65px;
+        display: none;
       }
     }
   }
