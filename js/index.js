@@ -19,25 +19,26 @@ window.addEventListener("DOMContentLoaded", () => {
       list.insertAdjacentHTML("beforeend", html);
 
       //   search functionality
-      function is_touch_enabled() {
-        return (
-          "ontouchstart" in window ||
-          navigator.maxTouchPoints > 0 ||
-          navigator.msMaxTouchPoints > 0
-        );
-      }
-      if (is_touch_enabled()) {
-        searchfield.addEventListener("blur", handler, false);
-      } else {
-        searchfield.addEventListener("keyup", handler, false);
-      }
+      //   function is_touch_enabled() {
+      //     return (
+      //       "ontouchstart" in window ||
+      //       navigator.maxTouchPoints > 0 ||
+      //       navigator.msMaxTouchPoints > 0
+      //     );
+      //   }
+      //   if (is_touch_enabled()) {
+      //     searchfield.addEventListener("blur", handler, false);
+      //   } else {
+      //     searchfield.addEventListener("keyup", handler, false);
+      //   }
+
+      searchfield.addEventListener("keyup", handler, false);
 
       function handler(e) {
         html = "";
         list.innerHTML = "";
-        let typed = e.target.value;
         for (let key in data) {
-          if (key.includes(typed)) {
+          if (key.includes(e.target.value)) {
             html += `<li><img alt="emoji" src="${data[key]}"><p class="emoji">:${key}:</p></li>`;
           }
         }
