@@ -118,6 +118,7 @@ header {
 @media screen and (max-width: 800px) {
   #container {
     > div {
+      display: none;
       > input {
         display: none;
       }

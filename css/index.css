@@ -223,6 +223,7 @@ header a img {
   font-size: 1.6rem;
   line-height: 55px;
   letter-spacing: 0.5rem;
+  display: block;
 }
 
 ::placeholder {
@@ -264,8 +265,11 @@ header a img {
 
 /* responsive styles */
 @media screen and (max-width: 800px) {
+  #container > div {
+    display: none;
+  }
   #container > div > input {
-    height: 65px;
+    display: none;
   }
 }
 @media screen and (max-width: 489px) {
